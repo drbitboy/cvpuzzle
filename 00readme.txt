@@ -23,15 +23,15 @@
 
 ### Manifest
 
-fb1002.txt          Original puzzle algorithm as Structured Text (ST) code
-Makefile            Make file to call st2py.bash
-st2py.bash          BASH script that creates pyfb1002.py from fb1002.txt
-->pyfb1002.py       - File created by Makefile/st2py.bash; not part of repo
-cvpuzzle.py         Run single case against pyfb1002.py
-rat.py              Script to plot algorithm progression
-cvpuzzle.png        Image of plot from rat.py
-btcfb1002.py        Alternate implementation of algorithm in Python
-btcfb1002.txt       Alternate implementation of algorithm in ST
-test_cvpuzzle.py    Script to run test cases comparing original vs. alternate implementations
-00readme.txt        This file
-README.md           Symlink to this file for Github
+    fb1002.txt          Original puzzle algorithm as Structured Text (ST) code
+    Makefile            Make file to call st2py.bash
+    st2py.bash          BASH script that creates pyfb1002.py from fb1002.txt
+    =>pyfb1002.py       - File created by Makefile/st2py.bash; not part of repo
+    cvpuzzle.py         Run single case against pyfb1002.py
+    rat.py              Script to plot algorithm progression
+    cvpuzzle.png        Image of plot from rat.py
+    btcfb1002.py        Alternate implementation of algorithm in Python
+    btcfb1002.txt       Alternate implementation of algorithm in ST
+    test_cvpuzzle.py    Script to run test cases comparing original vs. alternate implementations
+    00readme.txt        This file
+    README.md           Symlink to this file for Github
