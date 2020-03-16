@@ -1,7 +1,12 @@
 
+### Default target [all]:  create Python implementation of algorithm
+###                        from Structured Text source in [fb1002.txt]
 
 all:
 	./st2py.bash < fb1002.txt > pyfb1002.py
+
+### Target [zip]:  move most files to ZIP; this is now obsolete because
+###                this suite of programs in in a Github repository
 
 zip:
 	$(RM) cvpuzzle.zip
