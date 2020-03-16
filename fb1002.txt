@@ -1,0 +1,71 @@
+﻿FUNCTION_BLOCK "fb1002"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      x : LReal;
+      N : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      Numerator : DInt;
+      Denominator : DInt;
+   END_VAR
+
+   VAR 
+      diVar1 : DInt;
+      diVar2 : DInt;
+      diVar3 : DInt;
+      diVar4 : DInt;
+      lrVar1 : LReal;
+      bFound : Bool;
+   END_VAR
+
+
+BEGIN
+	#diVar1 := 0;
+	#diVar2 := 1;
+	#diVar3 := 1;
+	#diVar4 := 1;
+	#bFound:=False;
+	WHILE NOT #bFound DO
+	        IF #diVar2 <= #N AND #diVar4 <= #N THEN
+	            #lrVar1 := (DINT_TO_LREAL(#diVar1) + DINT_TO_LREAL(#diVar3)) / (DINT_TO_REAL(#diVar2) + DINT_TO_LREAL(#diVar4));
+	            IF #x = #lrVar1 THEN
+	                IF (#diVar2 + #diVar4) < #N THEN
+	                    #Numerator := #diVar1 + #diVar3;
+	                    #Denominator := #diVar2 + #diVar4;
+	                    #bFound := True;
+	                    RETURN;
+	                    
+	                ELSIF #diVar4 > #diVar2 THEN
+	                    #Numerator := #diVar3;
+	                    #Denominator := #diVar4;
+	                    #bFound := True;
+	                    RETURN;
+	                ELSE
+	                    #Numerator := #diVar1;
+	                    #Denominator := #diVar2;
+	                    #bFound := True;
+	                    RETURN;
+	                END_IF;
+	            ELSIF #x > #lrVar1 THEN
+	                #diVar1 := #diVar1 + #diVar3;
+	                #diVar2 := #diVar2 + #diVar4;
+	            ELSE
+	                #diVar3 := #diVar1 + #diVar3;
+	                #diVar4 := #diVar2 + #diVar4;
+	            END_IF;
+	        ELSE
+	            IF #diVar2 > #N THEN
+	                #Numerator := #diVar3;
+	                #Denominator := #diVar4;
+	                #bFound := True;
+	            ELSE
+	                #Numerator := #diVar1;
+	                #Denominator := #diVar2;
+	                #bFound := True;
+	            END_IF;
+	        END_IF;
+	END_WHILE;
+END_FUNCTION_BLOCK
+
