@@ -1,16 +1,16 @@
 
-Usage:
+    Usage:
 
-  Run algorithm:
+      Run algorithm:
 
-    make
-    python cvpuzzle.py 
+        make
+        python cvpuzzle.py 
 
-  Plot algorithm progression:
+      Plot algorithm progression:
 
-    python rat.py L   ### L is number of parent levels
+        python rat.py L   ### L is number of parent levels
 
-    e.g.
+        e.g.
 
-    python rat.py 4
+        python rat.py 4
 
