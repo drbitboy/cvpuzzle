@@ -1,3 +1,7 @@
+"""
+Usage:  python test_cvpuzzle.py
+
+"""
 import os
 import sys
 import struct
