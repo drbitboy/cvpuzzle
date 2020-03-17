@@ -26,7 +26,7 @@
     fb1002.txt          Original puzzle algorithm as Structured Text (ST) code
     Makefile            Make file to call st2py.bash
     st2py.bash          BASH script that creates pyfb1002.py from fb1002.txt
-    =>pyfb1002.py       - File created by Makefile/st2py.bash; not part of repo
+    =>pyfb1002.py       - Python implementation of fb10002.txt; created by Makefile/st2py.bash, and not part of repo
     cvpuzzle.py         Run single case against pyfb1002.py
     rat.py              Script to plot algorithm progression
     cvpuzzle.png        Image of plot from rat.py
