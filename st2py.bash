@@ -1,5 +1,16 @@
 #!/bin/bash
 
+### Script to convert Structured Text code fb1002.txt to
+### equivalent Python code in pyfb1002.py
+
+### Usage:
+###
+###   ./st2py.bash < fb1002.txt > pyfb1002.py
+###
+### OR
+###
+###   make all
+
 tr -d '\r﻿' \
 | sed \
   -e 's/\r$//' \
