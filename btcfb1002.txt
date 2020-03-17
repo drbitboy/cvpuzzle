@@ -31,18 +31,15 @@ BEGIN
 	                IF (#diVar2 + #diVar4) < #N THEN
 	                    #Numerator := #diVar1 + #diVar3;
 	                    #Denominator := #diVar2 + #diVar4;
-	                    RETURN;
-	                    
 	                ELSIF #diVar4 > #diVar2 THEN
 	                    #Numerator := #diVar3;
 	                    #Denominator := #diVar4;
-	                    RETURN;
 	                ELSE
 	                    #Numerator := #diVar1;
 	                    #Denominator := #diVar2;
-	                    RETURN;
 	                END_IF;
-	            ELSIF #x > #lrVar1 THEN
+	                RETURN;
+	            IF #x > #lrVar1 THEN
 	                #diVar1 := #diVar1 + #diVar3;
 	                #diVar2 := #diVar2 + #diVar4;
 	            ELSE
